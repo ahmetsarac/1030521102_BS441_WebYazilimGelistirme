@@ -37,7 +37,7 @@ const ProgressBarDelimeter = (props) => {
 			<div style={{...fillerStyles, width: combo >= 2 ? '100%': '0%'}}></div>
 		</div>
 		<div style={{...innerContainerStyles, border: 'none'}} > 
-			<div style={{...fillerStyles, width: combo == 3 ? '100%': '0%'}}></div>
+			<div style={{...fillerStyles, width: combo === 3 ? '100%': '0%'}}></div>
 		</div>
 	
 		</div>

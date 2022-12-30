@@ -20,7 +20,6 @@ function Classic() {
 	}
 	
 	const defineWinner = (choice, compChoice) => {
-		console.log("playerChoice: " + choice + " " + "computerChoice: " + compChoice );
 		if(choice === compChoice){
 			setResult('Tie');
 		}else if(
@@ -47,9 +46,9 @@ function Classic() {
 						Classic Mode
 					</p>
 					<div className="images" style={{ flexDirection: 'row'}}>
-						<img className='flex-item' src={Rock} width={200} height={200} onClick={() => handleClick(choices[0])}/>   
-						<img className='flex-item' src={Paper} width={200} height={200} onClick={() => handleClick(choices[1])}/>   
-						<img className='flex-item' src={Scissors} width={200} height={200} onClick={() => handleClick(choices[2])}/>  
+						<img className='flex-item' src={Rock} width={200} height={200} alt={"Rock"} onClick={() => handleClick(choices[0])}/>   
+						<img className='flex-item' src={Paper} width={200} height={200} alt={"Paper"} onClick={() => handleClick(choices[1])}/>   
+						<img className='flex-item' src={Scissors} width={200} height={200} alt={"Scissors"} onClick={() => handleClick(choices[2])}/>  
 					</div>
 					{playerChoice !== '' ? <p>You chose {playerChoice}, computer chose {computerChoice}.</p> : ''}
 					<p>{result}</p>
@@ -62,7 +61,7 @@ function Classic() {
 			<div className="App">
 				<header className="main-classic make-flex">
 					<p>
-						<a className="App-link" href='#' onClick={() => reset()}>Play Again</a>
+						<a className="App-link" href='{#}' onClick={() => reset()}>Play Again</a>
 					</p>
 				</header>
 			</div>
