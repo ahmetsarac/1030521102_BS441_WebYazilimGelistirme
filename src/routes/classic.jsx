@@ -12,7 +12,7 @@ function Classic() {
 	const [result, setResult] = useState('');
 	const [score, setScore] = useState(0);
 
-	const handleClick = async (choice) => {
+	const handleClick = (choice) => {
 		setPlayerChoice(choice);
 		const compChoice = choices[Math.floor(Math.random() * choices.length)];
 		setComputerChoice(compChoice);
@@ -41,8 +41,8 @@ function Classic() {
 
 	if(score < 10){
 		return (
-			<div className="classic">
-				<header className="App-header">
+			<div className="App">
+				<header className="main-classic make-flex">
 					<p>
 						Classic Mode
 					</p>
@@ -51,7 +51,7 @@ function Classic() {
 						<img className='flex-item' src={Paper} width={200} height={200} onClick={() => handleClick(choices[1])}/>   
 						<img className='flex-item' src={Scissors} width={200} height={200} onClick={() => handleClick(choices[2])}/>  
 					</div>
-					<p>You chose {playerChoice}, computer chose {computerChoice}.</p>
+					{playerChoice !== '' ? <p>You chose {playerChoice}, computer chose {computerChoice}.</p> : ''}
 					<p>{result}</p>
 					<p>Score: {score}</p>
 				</header>
@@ -59,8 +59,8 @@ function Classic() {
 		);
 	}else{
 		return (
-			<div className="classic">
-				<header className="App-header">
+			<div className="App">
+				<header className="main-classic make-flex">
 					<p>
 						<a className="App-link" href='#' onClick={() => reset()}>Play Again</a>
 					</p>
