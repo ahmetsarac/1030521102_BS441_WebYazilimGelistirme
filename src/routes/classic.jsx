@@ -61,7 +61,7 @@ function Classic() {
 			<div className="App">
 				<header className="main-classic make-flex">
 					<p>
-						<a className="App-link" href='{#}' onClick={() => reset()}>Play Again</a>
+						<a className="App-link" href="# " onClick={() => reset()}>Play Again</a>
 					</p>
 				</header>
 			</div>
